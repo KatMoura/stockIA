@@ -2,7 +2,7 @@
 
 const CHAVE_PRODUTOS = "@stokia/produtos";
 
-function sanitizarProduto(produto) {
+function limparProduto(produto) {
   return {
     id: produto.id,
     nome: (produto.nome || "").trim(),
@@ -20,7 +20,7 @@ export async function carregarProdutos() {
   try {
     const produtos = JSON.parse(dados);
     if (!Array.isArray(produtos)) return [];
-    return produtos.map(sanitizarProduto);
+    return produtos.map(limparProduto);
   } catch {
     return [];
   }
@@ -31,7 +31,7 @@ async function persistirProdutos(produtos) {
 }
 
 export async function criarProduto(baseProduto) {
-  const novoProduto = sanitizarProduto({
+  const novoProduto = limparProduto({
     ...baseProduto,
     id: `${Date.now()}-${Math.random().toString(16).slice(2, 8)}`,
     atualizadoEm: new Date().toISOString()
@@ -48,7 +48,7 @@ export async function editarProduto(id, dadosAtualizados) {
   const atualizados = produtos.map((produto) => {
     if (produto.id !== id) return produto;
 
-    return sanitizarProduto({
+    return limparProduto({
       ...produto,
       ...dadosAtualizados,
       id: produto.id,
@@ -132,5 +132,5 @@ export async function carregarDadosDemonstracao() {
   ];
 
   await persistirProdutos(dados);
-  return dados.map(sanitizarProduto);
+  return dados.map(limparProduto);
 }
