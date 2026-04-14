@@ -1,4 +1,4 @@
-﻿# StokIA - MVP Mobile (MINFO)
+﻿# StokIA - MVP Mobile
 
 Aplicativo mobile (Expo + React Native) para controle de estoque com foco em pequenas operacoes (mercado de bairro, cantina, farmacia pequena, estoque escolar).
 
