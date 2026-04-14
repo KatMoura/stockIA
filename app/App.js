@@ -1,4 +1,4 @@
-﻿import AppPrincipal from "./screens/AppPrincipal";
+﻿import AppPrincipal from "../screens/AppPrincipal";
 
 export default function App() {
   return <AppPrincipal />;
