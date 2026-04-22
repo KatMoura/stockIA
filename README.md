@@ -57,14 +57,3 @@ cd stokia
 npm install
 npm run start
 ```
-
-## Roteiro curto para o seminario (5-7 min)
-
-1. Problema e publico-alvo (1 min).
-2. Fluxo da solucao no app (2 min).
-3. Demo ao vivo com dados simulados e operacoes de estoque (2-3 min).
-4. Limites atuais e proximos passos (1 min): autenticacao, backend/API, relatorios e notificacoes push.
-
-## Equipe
-
-Preencher nomes dos integrantes (ate 3 alunos).
